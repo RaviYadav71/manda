@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mandaala - Corporate Gifting & Printing Solutions</title>
+    <style>
+        
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.tab {
+  padding: 12px 20px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: white;
+  color: #333;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab:hover {
+  background-color: #f0f0f0;
+}
+
+.tab.active {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  font-weight: 600;
+}
+
+
+.below-hero {
+    background-color: #fffacd; /* Soft lemon chiffon yellow for consistency */
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.below-hero-image {
+    max-width: 1200px; /* Matches hero container width */
+    width: 100%;
+}
+
+.below-hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Subtle rounding for light dim aesthetic */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .below-hero {
+        padding: 10px;
+    }
+}
+
+
+
+.hero {
+    padding: 50px 20px;
+    background-color: #fffacd; /* Soft lemon chiffon yellow for light dim look */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full viewport height */
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(188, 99, 10, 0.1); /* Subtle dim overlay for muted effect */
+    z-index: 1;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    gap: 20px;
+    position: relative;
+    z-index: 2; /* Ensures content is above the dim overlay */
+}
+
+.hero-text {
+    flex: 1;
+    padding: 20px;
+}
+
+.text-overlay {
+    background-color: rgba(255, 255, 255, 0.85); /* Light semi-transparent overlay for text readability */
+    padding: 20px;
+    border-radius: 10px;
+    color: #333; /* Darker text for contrast */
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #222; /* Slightly darker for muted look */
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: #444; /* Muted text color */
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4682b4; /* Steel blue for a softer, muted button */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #3a6b9c; /* Darker steel blue on hover */
+}
+
+.hero-image {
+    flex: 1;
+    max-width: 400px;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1; /* 4x4 square ratio */
+    object-fit: cover;
+    border-radius: 10px; /* Subtle rounding for softer look */
+    box-shadow: 0 4px 8px rgba(183, 174, 81, 0.808); /* Soft shadow for depth */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-image {
+        max-width: 100%;
+    }
+
+    .text-overlay {
+        padding: 15px;
+    }
+}
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #83c5da;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between logo image and text */
+}
+
+.logo img {
+    height: 40px; /* Adjust logo size as needed */
+    width: auto;
+}
+
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        .logo span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333; /* Muted color for text */
+    text-transform: uppercase;
+}
+
+        .btn-primary {
+            background-color: #ff6200;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('hero-bg.jpg') no-repeat center center/cover;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #bc2727;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        /* Trusted Companies */
+        .trusted {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 30px 0;
+            background-color: #f8f8f8;
+        }
+
+        .trusted img {
+            height: 30px;
+        }
+
+        /* Solutions Section */
+        .solutions {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .solutions h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+
+        .solutions-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .solution-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .solution-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .solution-card h3 {
+            font-size: 20px;
+            margin: 15px 0;
+        }
+
+        .solution-card a {
+            color: #ff6200;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* How Mandaala Gives Section */
+        .how-mandaala {
+            display: flex;
+            max-width: 1200px;
+            margin: 50px auto;
+            gap: 40px;
+            padding: 0 20px;
+        }
+
+        .how-mandaala .left {
+            flex: 1;
+        }
+
+        .how-mandaala .right {
+            flex: 2;
+        }
+
+        .how-mandaala h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .how-mandaala .tab {
+            background-color: #ff6200;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .how-mandaala .question {
+            margin-bottom: 20px;
+        }
+
+        .how-mandaala .question h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        /* What We Do Section */
+        .what-we-do {
+            background-color: #e6f0fa;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .what-we-do h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+
+        .what-we-do-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .what-we-do-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .what-we-do-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .what-we-do-card h3 {
+            font-size: 20px;
+            margin: 15px 0;
+        }
+
+        /* Benefits Section */
+        .benefits {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .benefits h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .benefit-card {
+            text-align: center;
+        }
+
+        .benefit-card img {
+            height: 50px;
+            margin-bottom: 10px;
+        }
+
+        .benefit-card p {
+            font-weight: bold;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background-color: #fff9e6;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .testimonials h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+
+        .testimonial-card {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: left;
+        }
+
+        .testimonial-card img {
+            height: 40px;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-card p {
+            margin-bottom: 20px;
+        }
+
+        .testimonial-card .author {
+            font-weight: bold;
+        }
+
+        /* Brand Growth Section */
+        .brand-growth {
+            background-color: #ff6200;
+            color: #fff;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .brand-growth h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        /* FAQs Section */
+        .faqs {
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .faqs h2 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #ddd;
+            padding: 15px 0;
+        }
+
+        .faq-item h3 {
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a2e5a;
+            color: #fff;
+            padding: 50px 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-grid h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .footer-grid ul {
+            list-style: none;
+        }
+
+        .footer-grid ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-grid ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 30px;
+            border-top: 1px solid #fff;
+            padding-top: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+    <div class="logo">
+        <img src="Images/manlogo.png" alt="Mandaala Logo">
+        <span>Mandaala</span>
+    </div>
+    <nav>
+        <a href="#">Solutions</a>
+        <a href="#">Products</a>
+        <a href="#">Why Mandaala</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact</a>
+        <a href="#">Gift Catalog</a>
+        <a href="#" class="btn-primary">Book A Demo</a>
+    </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-container">
+        <div class="hero-text">
+            <div class="text-overlay">
+                <h1>Revolutionising Corporate Gifting & Printing Solutions</h1>
+                <p>Elevate Employee & Customer Engagement with Mandaala’s Unique Merchandise</p>
+                <a href="#" class="btn-primary">Book A Demo</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="Images/Mimage1.png" alt="Corporate Gifting Image" style="width: 100%; aspect-ratio: 1/1;">
+        </div>
+    </div>
+</section>
+<!-- Below Hero Image Section -->
+<section class="below-hero">
+    <div class="below-hero-image">
+        <img src="Images/mbelow.jpeg" alt="Mandaala Below Hero Image" style="width: 100%; height: auto;">
+    </div>
+</section>
+
+    <!-- Trusted Companies
+    <section class="trusted">
+        <img src="paytm-logo.png" alt="Paytm">
+        <img src="jll-logo.png" alt="JLL">
+        <img src="lt-financials-logo.png" alt="L&T Financials">
+        <img src="firstsource-logo.png" alt="Firstsource">
+        <img src="tata-logo.png" alt="Tata">
+        <img src="xerox-logo.png" alt="Xerox">
+    </section> -->
+
+    <!-- Solutions Section -->
+<section class="solutions">
+    <h2>Comprehensive Solutions For Corporate Gifting & Printing</h2>
+    <p>Our SaaS-powered tech makes ordering simple from product selection to doorstep delivery across India.</p>
+    <div class="solutions-grid">
+        <div class="solution-card">
+            <img src="Images/Mimage2.png" alt="New Hire Program">
+            <h3>New Hire Program</h3>
+            <p>Attract new talent, engage employees, and boost retention with personalized welcome kits for new hires.</p>
+            <a href="#">Explore More</a>
+        </div>
+        <div class="solution-card">
+            <img src="Images/Mimage3.png" alt="Festive Gifting">
+            <h3>Festive Gifting</h3>
+            <p>Spread cheer with festive gifting programs for employees, clients, and partners.</p>
+            <a href="#">Explore More</a>
+        </div>
+        <div class="solution-card">
+            <img src="Images/Mimage4.png" alt="Bulk Gifting">
+            <h3>Bulk Gifting</h3>
+            <p>Simplify large-scale gifting with our seamless bulk ordering and delivery solutions.</p>
+            <a href="#">Explore More</a>
+        </div>
+        <div class="solution-card">
+            <img src="Images/Mimage5.png" alt="Collaterals">
+            <h3>Collaterals</h3>
+            <p>Enhance your brand presence with professionally designed marketing collaterals.</p>
+            <a href="#">Explore More</a>
+        </div>
+    </div>
+</section>
+
+<!-- this is text -->
+<section style="display: flex; justify-content: center; align-items: center; height: 10vh; text-align: center;">
+  <div>
+    <h2>Find Out How Mandaala Gives Solutions For Different Departments</h2>
+  </div>
+</section>
+
+<!-- this is button -->
+
+<!------------------------------------------------------------------------------------------ -->
+<section style="display: flex; justify-content: center; align-items: center; padding: 20px 0;">
+  <div class="header" style="text-align: center;">
+    <div class="tabs" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px;">
+      <button class="tab active" style="padding: 12px 20px; border: none; border-radius: 6px; background-color: #007BFF; color: white; font-weight: 600; cursor: pointer; transition: background-color 0.3s;">
+        Company-wide
+      </button>
+      <button class="tab" style="padding: 12px 20px; border: 1px solid #ccc; border-radius: 6px; background-color: white; color: #333; font-weight: 500; cursor: pointer; transition: all 0.3s;">
+        HR
+      </button>
+      <button class="tab" style="padding: 12px 20px; border: 1px solid #ccc; border-radius: 6px; background-color: white; color: #333; font-weight: 500; cursor: pointer; transition: all 0.3s;">
+        Admin
+      </button>
+      <button class="tab" style="padding: 12px 20px; border: 1px solid #ccc; border-radius: 6px; background-color: white; color: #333; font-weight: 500; cursor: pointer; transition: all 0.3s;">
+        Procurement
+      </button>
+      <button class="tab" style="padding: 12px 20px; border: 1px solid #ccc; border-radius: 6px; background-color: white; color: #333; font-weight: 500; cursor: pointer; transition: all 0.3s;">
+        Marketing
+      </button>
+    </div>
+  </div>
+</section>
+
+    <section class="how-mandaala">
+  <div class="content">
+    <div class="left">
+      <div class="question">
+        <h3>Is it possible to manage and coordinate multi-department processes through a single platform?</h3>
+      </div>
+      <div class="question">
+        <h3>How can Mandaala transform and enhance the efficiency of a single marketplace?</h3>
+      </div>
+      <div class="question">
+        <h3>How can Mandaala assist in managing corporate gifting needs effectively?</h3>
+      </div>
+      <a href="#" class="btn-primary">Book A Demo</a>
+    </div>
+
+    <div class="right">
+      <p><strong>YES, Automated Gift Ordering and Tracking System</strong></p>
+      <p>
+        These products include promotional items or corporate gifts to increase visibility and recognition
+        of your brand with marketing materials that you can easily access and order through our online portal.
+      </p>
+      <p>Managing Diverse Corporate Gifting Needs.</p>
+      <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=280&fit=crop&crop=center" alt="How Mandaala Works">
+    </div>
+  </div>
+</section>
+
+<style>
+  .how-mandaala {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+  }
+
+  .how-mandaala .content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: flex-start;
+  }
+
+  .how-mandaala .left,
+  .how-mandaala .right {
+    flex: 1 1 45%;
+    min-width: 300px;
+  }
+
+  .how-mandaala .question {
+    margin-bottom: 20px;
+  }
+
+  .how-mandaala .question h3 {
+    font-size: 18px;
+    color: #333;
+    margin: 0;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 24px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+
+  .how-mandaala .right p {
+    margin-bottom: 16px;
+    color: #444;
+    font-size: 16px;
+  }
+
+  .how-mandaala .right img {
+    margin-top: 20px;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+</style>
+<!-- ------------------------------------------------------------------------------------------------------ -->
+
+<section style="text-align: center; padding: 60px 20px; background-color: #f4f4f4;">
+  <img src="/Images/image.png" alt="What We Do Poster" style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+</section>
+
+
+
+<!-- What We Do Section -->
+<section class="what-we-do">
+  <div class="what-we-do-grid">
+    <div class="what-we-do-card">
+      <img src="Images/Mimage8.png" alt="Print Stationery" />
+      <h3>Print Stationery</h3>
+      <p>Increase brand loyalty with personalized stationery for employees and clients.</p>
+      <a href="#">Explore More</a>
+    </div>
+    <div class="what-we-do-card">
+      <img src="Images/Mimage9.png" alt="Clothing" />
+      <h3>Clothing</h3>
+      <p>Create unforgettable experiences with custom-branded apparel.</p>
+      <a href="#">Explore More</a>
+    </div>
+    <div class="what-we-do-card">
+      <img src="Images/Mimage10.png" alt="Eyewear" />
+      <h3>Eyewear</h3>
+      <p>Elevate your brand with customized eyewear for corporate gifting.</p>
+      <a href="#">Explore More</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .what-we-do {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+  }
+
+  .what-we-do-title {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #222;
+    animation: fadeInDown 0.6s ease forwards;
+  }
+
+  .what-we-do-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .what-we-do-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 0.8s ease forwards;
+  }
+
+  .what-we-do-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+  }
+
+  .what-we-do-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 16px;
+  }
+
+  .what-we-do-card h3 {
+    font-size: 20px;
+    color: #007BFF;
+    margin-bottom: 10px;
+  }
+
+  .what-we-do-card p {
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 16px;
+  }
+
+  .what-we-do-card a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: 600;
+    transition: color 0.3s;
+  }
+
+  .what-we-do-card a:hover {
+    color: #0056b3;
+  }
+
+  /* Animations */
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+<!-- ---------------------------------------------------------------- -->
+
+<!-- Benefits Section -->
+<section class="benefits">
+  <h2>How Does Mandaala Benefit You</h2>
+  <h3>Why Mandaala Is The Best Choice</h3>
+
+  <div class="benefits-row">
+    <div class="benefit-card">
+      <img src="Images/Mimage11.png" alt="Clients">
+      <p>150+ Clients</p>
+      <small>ISO 9001:2015 Certified</small>
+    </div>
+    <div class="benefit-card">
+      <img src="Images/Mimage12.png" alt="Rating">
+      <p>9.3 Average Rating</p>
+      <small>ISO 27001:2022 Certified</small>
+    </div>
+    <div class="benefit-card">
+      <img src="Images/Mimage13.png" alt="Years">
+      <p>17+ Years</p>
+      <small>Great Place To Work Certified</small>
+    </div>
+  </div>
+
+  <div class="benefits-row">
+    <div class="benefit-card">
+      <img src="Images/Mimage14.png" alt="Support">
+      <p>24/7 Support</p>
+      <small>Global Customer Helpdesk</small>
+    </div>
+    <div class="benefit-card">
+      <img src="Images/Mimage15.png" alt="Satisfaction">
+      <p>99% Satisfaction</p>
+      <small>Consistent Delivery Ratings</small>
+    </div>
+    <div class="benefit-card">
+      <img src="Images/Mimage16.png" alt="Reach">
+      <p>Pan-India Reach</p>
+      <small>Across 29+ States</small>
+    </div>
+  </div>
+</section>
+
+<style>
+  .benefits {
+    padding: 60px 20px;
+    background-color: #f4f7fb;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .benefits h2 {
+    font-size: 32px;
+    color: #222;
+    margin-bottom: 10px;
+  }
+
+  .benefits h3 {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 40px;
+  }
+
+  .benefits-row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+
+  .benefit-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    max-width: 300px;
+    flex: 1 1 260px;
+  }
+
+  .benefit-card:hover {
+    transform: translateY(-6px);
+  }
+
+  .benefit-card img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 16px;
+  }
+
+  .benefit-card p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #007BFF;
+  }
+
+  .benefit-card small {
+    color: #777;
+    font-size: 14px;
+  }
+</style>
+
+
+
+<!-- Testimonials Section -->
+<section class="testimonials">
+  <h2>Client Testimonials</h2>
+  <h3>Hear From Our Happy Clients!</h3>
+
+  <div class="testimonial-card">
+    <div class="testimonial-left">
+      <img src="Images/imaget.png" alt="Aegon Life Logo" class="testimonial-logo" />
+      <div class="company-name">Aegon Life</div>
+      <div class="company-info">
+        <p><strong>Size:</strong> Huge</p>
+        <p><strong>Market:</strong> Pan-India</p>
+        <p><strong>Industry:</strong> Financial Services</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="testimonial-right">
+      <p>
+        "Printology's Stationery module is like a boon for us. The turnaround time is faster, we can follow-up for
+        delivery as the order tracking happens online. Everything right from placing the order to receiving the final
+        product, the process is now seamless."
+      </p>
+      <p class="author">Shabana Azmi<br><span>Manager, Infra & Facilities</span></p>
+      <a href="#">Read Case Study</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .testimonials {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .testimonials h2 {
+    font-size: 32px;
+    color: #222;
+    margin-bottom: 10px;
+  }
+
+  .testimonials h3 {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 40px;
+  }
+
+  .testimonial-card {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: left;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    gap: 30px;
+  }
+
+  .testimonial-left {
+    flex: 0 0 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .testimonial-logo {
+    width: 100px;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 12px;
+  }
+
+  .company-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    color: #333;
+  }
+
+  .company-info p {
+    margin: 4px 0;
+    font-size: 14px;
+    color: #666;
+  }
+
+  .divider {
+    width: 1px;
+    background-color: #ddd;
+    height: auto;
+  }
+
+  .testimonial-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .testimonial-right p {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 16px;
+    line-height: 1.6;
+  }
+
+  .testimonial-right .author {
+    font-weight: bold;
+    color: #007BFF;
+    margin-bottom: 10px;
+  }
+
+  .testimonial-right .author span {
+    font-weight: normal;
+    color: #555;
+  }
+
+  .testimonial-right a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: 600;
+    transition: color 0.3s;
+  }
+
+  .testimonial-right a:hover {
+    color: #0056b3;
+  }
+
+  @media (max-width: 768px) {
+    .testimonial-card {
+      flex-direction: column;
+    }
+
+    .divider {
+      display: none;
+    }
+
+    .testimonial-left,
+    .testimonial-right {
+      text-align: center;
+    }
+
+    .testimonial-right {
+      align-items: center;
+    }
+  }
+</style>
+
+
+
+    <!-- Brand Growth Section -->
+    <section class="brand-growth">
+        <h2>Drive Brand Growth Through Automated Processes</h2>
+        <a href="#" class="btn-primary">Book A Demo</a>
+    </section>
+
+    <!-- FAQs Section -->
+    <section class="faqs">
+        <h2>FAQs</h2>
+        <h3>Ask Us Anything, We’re Here To Help</h3>
+        <div class="faq-item">
+            <h3>How do I set up automatic gifting?</h3>
+        </div>
+        <div class="faq-item">
+            <h3>Can we customize the gifts with our company logo and message?</h3>
+        </div>
+        <div class="faq-item">
+            <h3>What if there is an issue with my order?</h3>
+        </div>
+        <div class="faq-item">
+            <h3>Are there any discounts or promotional offers?</h3>
+        </div>
+        <div class="faq-item">
+            <h3>How long will it take for my order to arrive?</h3>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <h3>Mandaala</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Solutions</a></li>
+                    <li><a href="#">Teams</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>About Us</h3>
+                <ul>
+                    <li><a href="#">Story</a></li>
+                    <li><a href="#">Mission</a></li>
+                    <li><a href="#">Founders</a></li>
+                    <li><a href="#">Milestones</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Brand Solutions</h3>
+                <ul>
+                    <li><a href="#">Branding</a></li>
+                    <li><a href="#">Stationery</a></li>
+                    <li><a href="#">Bulk Gifting</a></li>
+                    <li><a href="#">Promotions</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Teams</h3>
+                <ul>
+                    <li><a href="#">Mandaala For HR</a></li>
+                    <li><a href="#">Mandaala For Admin</a></li>
+                    <li><a href="#">Mandaala For Procurement</a></li>
+                    <li><a href="#">Mandaala For Marketing</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Testimonials</a></li>
+                    <li><a href="#">Case Studies</a></li>
+                    <li><a href="#">White Paper</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Mandaala Private Ltd. All Rights Reserved. <a href="#">Terms & Privacy</a></p>
+            <p>1800-123-4567 | <a href="#">mandaala.support.com</a></p>
+        </div>
+    </footer>
+</body>
+
+</html>
